@@ -5,35 +5,106 @@ h2{
 
 .nav{
   display: flex;
-  flex-direction: column;
-  background-color: blue;
-  width: 40px;
   justify-content: center;
-  position: absolute;
-  bottom: 0;
-  left: 45%;
-  /* margin: 0 auto 20px auto; */
+  align-items: center;
   
-  .btnNav{
-    list-style-type: none;
-
-  }
-  
-  .btnMenu{
+  .groupNav{
+    transition: all 1s ease-in-out;
     display: flex;
-    list-style-type: none;
-  }
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
 
+    .btnNav{
+      list-style-type: none;
+      background-color: aquamarine;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      
+      li img{
+        width: 18px;
+        margin-bottom: 3px;
+      }
+  
+    }
+    
+    .btnMenu{
+      display: flex;
+      list-style-type: none;
+      transform: translateY(50px);
+      background-color: yellow;
+      justify-content: center;
+      /* width: 200px; */
+      gap: 10px;
+      padding: 7px;
+      border-radius: 13px;
+  
+      li img{
+        width: 30px;
+        height: 30px;
+      }
+      
+      li:first-child::before{
+        background-color: aqua;
+        content: "Home";
+        position: absolute;
+        top: -25px;
+        left: -2px;
+        opacity: 0;
+        display: none;
+      }
+
+      li:first-child:hover::before{
+        opacity: 1;
+        display: block;
+      }
+  
+      li:nth-child(2)::before{
+        background-color: aqua;
+        content: "Project";
+        position: absolute;
+        top: -25px;
+        left: 38px;
+        opacity: 0;
+      }
+      
+      li:nth-child(3)::before{
+        background-color: aqua;
+        content: "Play";
+        position: absolute;
+        top: -25px;
+        /* left: -10px; */
+        opacity: 0;
+      }
+  
+      li:last-child::before{
+        background-color: aqua;
+        content: "Chat";
+        position: absolute;
+        top: -25px;
+        /* left: -10px; */
+        opacity: 0;
+      }
+    }
+  }
 }
 
 /* <div class="nav">
-    <ul class="btnNav">
-      <li><img src="img/pentagon.png" alt="pentagon"></li>
-    </ul>
-    <ul class="btnMenu">
-      <li><img src="img/home.png" alt="Home"></li>
-      <li><img src="img/document.png" alt="Document"></li>
-      <li><img src="img/play.png" alt="Play"></li>
-      <li><img src="img/chat.png" alt="Chat"></li>
-    </ul>
+    <div class="groupNav">
+      <ul class="btnNav">
+        <li><img src="img/pentagon.png" alt="pentagon"></li>
+      </ul>
+      <ul class="btnMenu">
+        <li><img src="img/instagram.png" alt="Home"></li>
+        <li><img src="img/instagram.png" alt="Document"></li>
+        <li><img src="img/instagram.png" alt="Play"></li>
+        <li><img src="img/instagram.png" alt="Chat"></li>
+      </ul>
+    </div>
   </div> */

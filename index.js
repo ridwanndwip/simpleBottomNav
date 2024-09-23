@@ -11,10 +11,10 @@ function changePosition(){
 }
 
 function returnPosition(){
-  nav.firstElementChild.style.transform = 'translateY(0)';
   setTimeout(() =>{
-    nav.lastElementChild.style.transform = 'translateY(50px)';
+    nav.firstElementChild.style.transform = 'translateY(0)';
   },200);
+  nav.lastElementChild.style.transform = 'translateY(50px)';
 }
 
 // Reset timer inaktivitas

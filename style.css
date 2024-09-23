@@ -1,6 +1,5 @@
 h2{
   text-align:center;
-  /* margin-top: 20px; */
 }
 
 .nav{
@@ -9,7 +8,6 @@ h2{
   align-items: center;
   
   .groupNav{
-    transition: all 1s ease-in-out;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -19,13 +17,15 @@ h2{
 
     .btnNav{
       list-style-type: none;
-      background-color: aquamarine;
+      background-color: EEEEEE;
       align-items: center;
       display: flex;
       justify-content: center;
       width: 40px;
       height: 40px;
       border-radius: 50%;
+      transition: all .5s ease-in-out;
+      box-shadow: 1px 3px 13px rgba(0, 0, 0, 0.5);
       
       li img{
         width: 18px;
@@ -33,21 +33,21 @@ h2{
       }
   
     }
-    
+  
     .btnMenu{
       display: flex;
       list-style-type: none;
       transform: translateY(50px);
-      background-color: yellow;
+      background-color: #373A40;
       justify-content: center;
-      /* width: 200px; */
-      gap: 10px;
-      padding: 7px;
-      border-radius: 13px;
+      gap: 7px;
+      padding: 12px;
+      border-radius: 15px;
+      transition: all .5s ease-in-out;
   
       li img{
-        width: 30px;
-        height: 30px;
+        width: 18px;
+        height: 18px;
       }
       
       li:first-child::before{
@@ -72,6 +72,12 @@ h2{
         top: -25px;
         left: 38px;
         opacity: 0;
+        display: none;
+      }
+
+      li:nth-child(2):hover::before{
+        opacity: 1;
+        display: block;
       }
       
       li:nth-child(3)::before{
@@ -81,6 +87,12 @@ h2{
         top: -25px;
         /* left: -10px; */
         opacity: 0;
+        display: none;
+      }
+
+      li:nth-child(3):hover::before{
+        opacity: 1;
+        display: block;
       }
   
       li:last-child::before{
@@ -90,6 +102,12 @@ h2{
         top: -25px;
         /* left: -10px; */
         opacity: 0;
+        display: none;
+      }
+
+      li:last-child:hover::before{
+        opacity: 1;
+        display: block;
       }
     }
   }
